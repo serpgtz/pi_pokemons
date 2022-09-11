@@ -1,0 +1,22 @@
+.paginado{
+
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    display: inline-block;
+    background-color: rgba(113, 202, 202, 0.116);
+}
+.paginas li{
+    list-style: none;
+    /* border:1px black solid; */
+        display: inline-block;
+        padding: 5px;
+        font: bold 13px;
+        background-color: yellow;
+        border-radius: 90%;
+        align-content: space-around;
+        margin: 15px;
+        border: 3px rgb(7, 7, 7) solid;
+        
+}
+

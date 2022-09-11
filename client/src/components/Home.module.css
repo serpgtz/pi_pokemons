@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    /* text-decoration: none; */
+}
+
+.pokemones{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    background: rgba(204, 219, 34, 0.219);
+    border: 2px rgb(7, 7, 7) solid;
+    width: 200px;
+    /* height:340px ; */
+
+    margin: 10px;
+    border-radius: 10px;
+    
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.nav{
+    background-color: black;
+    color:rgb(204, 219, 34);
+    display: flex;
+    
+    padding:0px;
+    
+}
+.filters{
+    margin: auto;
+}
+.text{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.body{
+    background-image: url("../image/pokemon-1662790607801-2061.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-size: 100%;
+   
+}
+.link{
+    text-decoration: none;
+    color: antiquewhite;
+    font: bold;
+}
+.refresh{
+    display: flex;
+    width: 100px;
+    margin-left: 15px;
+    margin-top: 15px;
+    border: 2px yellow solid;
+    background-color: white;
+    align-content: flex-end;
+}
+
+.crear{
+    margin: 12px;
+    /* background-color: white; */
+    color: black;
+    font: bold;
+}
