@@ -157,7 +157,7 @@ function handleTipos(e){
                         <Link className={s.text} onClick={e=>handlePage(e)} to={"/Detail/"+p.id}>
                         <Card  name={p.name}
                         image={p.image}
-                        tipos={p.tipos?.map(t=><p>{t}</p>)}
+                        tipos={p.hasOwnProperty("types")? p.types.map(t=><p>{t.name}</p>):p.tipos?.map(t=><p>{t}</p>)}
                         ataque={p.ataque}/>
                        
                         </Link>

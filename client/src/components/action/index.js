@@ -105,6 +105,7 @@ export function getTipos(){
 
 export function postPokemons(payload){
     return async function(dispatch){
+        console.log(payload)
         const post= await axios.post("http://localhost:3001/api/pokemones",payload)
         return dispatch({
             type:POST_POKEMON,

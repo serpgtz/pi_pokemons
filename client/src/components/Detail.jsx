@@ -29,7 +29,7 @@ export default function Detail(props){
                         
                         <img src={pokemon[0].image} />
                         <h1>{pokemon[0].name}</h1>
-                        <h4>Tipos:<br/>{pokemon[0].tipos?.map(t=>t)}</h4>
+                        <h4>Tipos:<br/>{pokemon[0].hasOwnProperty("types") ?pokemon[0].types?.map(t=><p>{t.name}</p>):pokemon[0].tipos?.map((t=><p>{t}</p>))}</h4>
                         <h4>Vida:{pokemon[0].vida}</h4>
                         <h4>Ataque:{pokemon[0].ataque}</h4>
                         <h4>Defensa:{pokemon[0].defensa}</h4>
