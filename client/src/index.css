@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+    background-image: url("./image/Pokemon\ Wallpapers\ For\ Computer\ in\ hd\ Pokemon\ Wallpaper\ For\ Computer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-size: 100%;
+   
+
 }
 
 code {

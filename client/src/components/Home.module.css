@@ -11,6 +11,9 @@
     background: rgba(204, 219, 34, 0.219);
     border: 2px rgb(7, 7, 7) solid;
     width: 200px;
+    transition: all 400ms ease;
+    
+   
     /* height:340px ; */
 
     margin: 10px;
@@ -24,10 +27,11 @@
     background-color: black;
     color:rgb(204, 219, 34);
     display: flex;
+    font-family: cursive;
     
     padding:0px;
-    
-}
+    }
+   
 .filters{
     margin: auto;
 }
@@ -35,14 +39,14 @@
     text-decoration: none;
     color: antiquewhite;
 }
-.body{
+/* .body{
     background-image: url("../image/pokemon-1662790607801-2061.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
     background-size: 100%;
    
-}
+} */
 .link{
     text-decoration: none;
     color: antiquewhite;
@@ -56,6 +60,8 @@
     border: 2px yellow solid;
     background-color: white;
     align-content: flex-end;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .crear{
@@ -63,4 +69,8 @@
     /* background-color: white; */
     color: black;
     font: bold;
+    cursor: pointer;
+}
+.crear:hover{
+    background-color: rgb(20, 17, 17);
 }

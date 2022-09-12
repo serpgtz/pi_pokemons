@@ -1,0 +1,11 @@
+.button{
+    width: 200px;
+    border: 3px black solid;
+    border-radius: 3px;
+    background-color: white;
+    color: rgb(3, 3, 3);
+    cursor: pointer;
+    margin-top: 300px;
+    float: inline-end;
+    background-color: yellow;
+}

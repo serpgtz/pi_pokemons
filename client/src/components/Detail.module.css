@@ -1,0 +1,87 @@
+.detail{
+   
+   display: flex;
+   flex-direction: column;
+   height: 500px;
+   background-color: yellow;
+   width: auto;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   margin: 30px;
+   margin-left: 200px;
+   margin-right: 200px;
+   border: 5px black solid;
+   border-radius: 15px;
+}
+ul{
+    list-style-type: none;
+}
+.name{
+    color: orangered;
+    font-size: 40px;
+    font-family: cursive;
+}
+.tipos{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    /* display: inline-block; */
+    float: inline-start;
+    padding-left:0px;
+    margin-left: 370px;
+}
+.vida{
+    flex-direction: column;
+    /* display: inline-block; */
+    float: left;
+    margin-left: 150px   
+    ;
+}
+.ataque{
+    flex-direction: column;
+    /* display: inline-block; */
+    float: left;
+    margin-left: 15px;
+    
+}
+.defensa{
+    flex-direction: column;
+    /* display: inline-block; */
+    float: left;
+    margin-left: 15px;
+}
+.velocidad{
+    flex-direction: column;
+    /* display: inline-block; */
+    float: left;
+    margin-left: 15px;
+}
+.altura{
+    flex-direction: column;
+    /* display: inline-block; */
+    float: left;
+    margin-left: 15px;
+}
+.peso{
+    flex-direction: column;
+    /* display: inline-block; */
+    float: left;
+    margin-left: 15px;
+}
+.id{
+    flex-direction: column;
+    /* display: inline-block; */
+    display: flex;
+    float: inline-start;
+    margin-left: 15px; 
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.button{
+    width: 200px;
+    border: 3px black solid;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+}

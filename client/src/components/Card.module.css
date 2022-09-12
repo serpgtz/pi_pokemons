@@ -3,7 +3,17 @@
     background-color: rgba(255, 255, 255, 0.326);
     color: black;
     border-radius: 10px;
-    
+    font-family: cursive;
+   
  
+}
+
+.name{
+    color:rgb(241, 11, 11);
+    
+}
+.card{
+    transition: all 400ms ease;
+    
 }
 
