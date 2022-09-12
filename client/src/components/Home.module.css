@@ -22,6 +22,9 @@
     margin-left: 10px;
     margin-top: 10px;
 }
+.pokemones:hover{
+    transform: translateY(-4%);
+}
 
 .nav{
     background-color: black;
@@ -62,6 +65,13 @@
     align-content: flex-end;
     border-radius: 5px;
     cursor: pointer;
+    transform: all;
+}
+.refresh:hover{
+    background-color: yellow;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
 }
 
 .crear{
@@ -70,7 +80,9 @@
     color: black;
     font: bold;
     cursor: pointer;
+    transition: all;
 }
 .crear:hover{
     background-color: rgb(20, 17, 17);
+    border: 2px yellow solid;
 }

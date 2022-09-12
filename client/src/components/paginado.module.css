@@ -18,13 +18,14 @@
         margin: 15px;
         border: 3px rgb(7, 7, 7) solid;
         cursor: pointer;
-        transition: all 400ms ease;
+        transition: all;
     
         
         
 }
 .paginas li:hover{
     background-color: white;
+    width: 30px;
     
 }
 
