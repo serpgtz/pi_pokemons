@@ -2,43 +2,90 @@ const axios = require("axios")
 const {Pokemon, Type} = require("../db");
 
 
-const url = ("https://pokeapi.co/api/v2/pokemon?limit=40")
+
+
 
 async function getPokemonsApi(){
+
     let allPokemons = [];
+    let url = ("https://pokeapi.co/api/v2/pokemon")
+    let apiUrls=[]
+    let apiUrls2=[]
+    for (let i = 0; i < 2; i++) {
+        let urls = await axios.get(url)
+        apiUrls = [...apiUrls,...urls.data.results.map(u=>u.url)] 
+        url = urls.data.next
 
-     await axios.get(url)
-     .then(async (response)=>{
-        let arrayInfoData = response.data.results;
-        let promiseArray = [];
-
-        arrayInfoData.map( p=>promiseArray.push( axios.get(p.url)))
-     await Promise.all(promiseArray)
-     .then((response)=>{
+    }
+    let promesas= [];
+    apiUrls.map(p=>{
+        promesas.push(axios.get(p))
+    })
+    console.log(promesas)
+    await Promise.all(promesas)
+    .then(response=>{
         allPokemons = response.map(p=>{
-            return {
-                id: p.data.id,
-                name: p.data.name,
-                vida: p.data.stats[0].base_stat,
-                ataque: p.data.stats[1].base_stat,
-                velocidad: p.data.stats[5].base_stat,
-                altura: p.data.height,
-                defensa: p.data.stats[2].base_stat,
-                peso: p.data.weight,
-                image: p.data.sprites.other.dream_world.front_default,
-                tipos: p.data.types.map(t=>t.type.name)
+                        return {
+                            id: p.data.id,
+                            name: p.data.name,
+                            vida: p.data.stats[0].base_stat,
+                            ataque: p.data.stats[1].base_stat,
+                            velocidad: p.data.stats[5].base_stat,
+                            altura: p.data.height,
+                            defensa: p.data.stats[2].base_stat,
+                            peso: p.data.weight,
+                            image: p.data.sprites.other.dream_world.front_default,
+                            tipos: p.data.types.map(t=>t.type.name)
+            
+                        }
+                    })
+        
+    })
+    .catch(error=>{
+        console.log(error)
+    })
+           
+            return allPokemons
 
-            }
-        })
-     })
-
-   })
-   .catch((error) => {
-    return error;
-});
-//   console.log(allPokemons) 
-    return allPokemons
 }
+
+// const url = ("https://pokeapi.co/api/v2/pokemon?limit=40")
+
+// async function getPokemonsApi(){
+//     let allPokemons = [];
+
+//      await axios.get(url)
+//      .then(async (response)=>{
+//         let arrayInfoData = response.data.results;
+//         let promiseArray = [];
+
+//         arrayInfoData.map( p=>promiseArray.push( axios.get(p.url)))
+//      await Promise.allSettled(promiseArray)
+//      .then((response)=>{
+//         allPokemons = response.map(p=>{
+//             return {
+//                 id: p.data.id,
+//                 name: p.data.name,
+//                 vida: p.data.stats[0].base_stat,
+//                 ataque: p.data.stats[1].base_stat,
+//                 velocidad: p.data.stats[5].base_stat,
+//                 altura: p.data.height,
+//                 defensa: p.data.stats[2].base_stat,
+//                 peso: p.data.weight,
+//                 image: p.data.sprites.other.dream_world.front_default,
+//                 tipos: p.data.types.map(t=>t.type.name)
+
+//             }
+//         })
+//      })
+
+//    })
+//    .catch((error) => {
+//     return error;
+// });
+// //   console.log(allPokemons) 
+//     return allPokemons
+// }
 
 const getPokemonBs = async()=>{
 
@@ -59,15 +106,16 @@ const getPokemonBs = async()=>{
     
 }
 
- async function getAllPokemons(){
+  async function getAllPokemons(){
     let pokeApi = await getPokemonsApi()
     let pokeBs = await getPokemonBs()
     const alltotalInfo = pokeApi?.concat(pokeBs)
 
 
     return alltotalInfo;
-
-
+    
+    
+    // return allinfo
 }
 async function getPokemonByName(name){
 var pokebyName= []
@@ -147,13 +195,7 @@ try {
     
 
 
-    
-
-
-
-
-
-async function getPokemonById(id){
+    async function getPokemonById(id){
     let pokeById = [];
     let poke = [];
     let pokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)

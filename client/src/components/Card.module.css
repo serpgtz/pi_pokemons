@@ -4,16 +4,29 @@
     color: black;
     border-radius: 10px;
     font-family: cursive;
+    height: 120px;
+    padding: 5px;
+    
    
  
 }
+.image{
+    margin-top: 5px;
+}
 
 .name{
-    color:rgb(241, 11, 11);
+    color:rgb(71, 36, 65);
+    
     
 }
-.card{
-    transition: all 400ms ease;
-    
+.tipos{
+    color:rgb(201, 45, 175);
 }
+.cart{
+    width: 200px;
+    margin: 10px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
 

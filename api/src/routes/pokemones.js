@@ -91,10 +91,17 @@ router.post("/",async(req,res)=>{
      } catch (error) {
          console.log(error)
     }
-   
+   })
 
-    
+
+// router.put("/",async(req,res)=>{
+//     try {
+//         const {name}= req.body
+
+//         const pokemon = 
         
-})
-
+//     } catch (error) {
+        
+//     }
+// })
 module.exports = router;

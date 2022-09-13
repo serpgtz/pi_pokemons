@@ -1,5 +1,5 @@
 import React from "react";
-import {GET_ALL_POKEMONS,FILTER_TIPOS, GET_POKEMON,GET_POKEMON_BY_NAME, ORDEN_ALPHA, FILTER_ATACK,REMOVE_POKEMON,SAVE_PAGE, API_OR_CREATE,GET_TIPOS,POST_POKEMON} from "../action"
+import {GET_ALL_POKEMONS,FILTER_TIPOS,ACTUALIZACION_NAME, GET_POKEMON,GET_POKEMON_BY_NAME, ORDEN_ALPHA, FILTER_ATACK,REMOVE_POKEMON,SAVE_PAGE, API_OR_CREATE,GET_TIPOS,POST_POKEMON} from "../action"
 
 
 
@@ -115,10 +115,16 @@ export default function reducer(state=initialState, action){
         case FILTER_TIPOS:
             let pokemon = state.allpokemones
             let pokemonTipos = pokemon.filter(t=>t.tipos?.includes(action.payload))
-
+            let pokemonTypes = pokemon.filter(t=>t.types?.map(t=>t.name.includes(action.payload)))
+            console.log(pokemonTypes)
+            let pokemonsFilter= [...pokemonTipos,...pokemonTypes]
             return {
                 ...state,
-                pokemones:action.payload==="todos"?pokemon:pokemonTipos
+                pokemones:action.payload==="todos"?pokemon:pokemonTypes
+            }
+        case ACTUALIZACION_NAME:
+            return {
+                ...state
             }
             
 

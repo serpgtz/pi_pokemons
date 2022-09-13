@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTipos,postPokemons } from "./action";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import s from "./createPokemon.module.css"
 
 
@@ -22,6 +22,15 @@ function Validate(input){
         error.image = "falta agregar imagen"
         return error
     }
+    if ( !/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$/.test(input.image)) {
+       
+       
+          
+        
+        error.image = 'Not valid format';
+        return error
+    }
+       
     if(!input.vida){
         error.vida = "falta capturar vida"
         return error
@@ -109,6 +118,8 @@ export default function CreatePokemon(){
 
     })
 
+    const history = useHistory()
+
     useEffect(()=>{
         dispatch(getTipos())
     },[dispatch])
@@ -150,6 +161,7 @@ export default function CreatePokemon(){
    function handleSubmit(e){
     e.preventDefault()
     dispatch(postPokemons(input))
+    history.push("/home")
 
    }
 

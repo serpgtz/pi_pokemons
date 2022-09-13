@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getPokemonById,resetPokemon } from "./action/index";
+import ActualizarName from "./ActualizarName";
 import s from "./Detail.module.css"
 
 
@@ -10,9 +11,7 @@ export default function Detail(props){
 
 
     const dispatch = useDispatch()
-
    
-
     useEffect(()=>{
         dispatch(getPokemonById(props.match.params.id))
         console.log(props.match.params.id)
@@ -42,12 +41,18 @@ export default function Detail(props){
 
                     
                 }
+            
                 
+                <ActualizarName/>
                 <div>
                     <Link to={"/home"}>
                          <button className={s.button}>Home</button>
                     </Link>
+                
                 </div>
+                
+                
+                
                 
         </div>
     )

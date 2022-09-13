@@ -11,7 +11,8 @@ export const API_OR_CREATE = "API_OR_CREATE";
 export const GET_TIPOS = "GET_TIPOS";
 export const POST_POKEMON = "POST_POKEMON";
 export const FILTER_TIPOS = "FILTER_TIPOS";
-export const DELETE_ITEM = "DELETE_ITEM"
+export const DELETE_ITEM = "DELETE_ITEM";
+export const ACTUALIZACION_NAME = "ACTUALIZACION_NAME"
 
 
 
@@ -120,6 +121,18 @@ export function filterByTipos(tipos){
             payload:tipos
         })
     }
+}
+
+export function putPokemon(payload){
+    return function(dispatch){
+        axios.put("http://localhost:3001/api/pokemones",payload)
+        .then(response=>{
+            dispatch({
+                type:ACTUALIZACION_NAME,
+            })
+        })
+    }
+
 }
 
 
