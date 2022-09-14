@@ -115,12 +115,12 @@ export default function reducer(state=initialState, action){
         case FILTER_TIPOS:
             let pokemon = state.allpokemones
             let pokemonTipos = pokemon.filter(t=>t.tipos?.includes(action.payload))
-            let pokemonTypes = pokemon.filter(t=>t.types?.map(t=>t.name.includes(action.payload)))
+            let pokemonTypes = pokemon.filter(p=>p.types?.find(t=>t.name===action.payload))
             console.log(pokemonTypes)
             let pokemonsFilter= [...pokemonTipos,...pokemonTypes]
             return {
                 ...state,
-                pokemones:action.payload==="todos"?pokemon:pokemonTypes
+                pokemones:action.payload==="todos"?pokemon:pokemonsFilter
             }
         case ACTUALIZACION_NAME:
             return {
