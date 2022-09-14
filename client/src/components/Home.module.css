@@ -2,6 +2,15 @@
     margin: 0px;
     /* text-decoration: none; */
 }
+.body{
+    background-image: url("../image/Pokemon\ Wallpapers\ For\ Computer\ in\ hd\ Pokemon\ Wallpaper\ For\ Computer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-size: 100%;
+    
+    
+}
 
 .pokemones{
     text-decoration: none;

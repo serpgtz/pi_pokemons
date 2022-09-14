@@ -2,3 +2,110 @@ ul{
     list-style-type: none;
     padding-left: 0;
 }
+*{
+    font-family: cursive;
+    
+}
+.fullcontainer{
+    background-image: url("../image/pokemon-1662790607801-2061.jpg");
+    background-attachment: fixed;
+    display: flex;
+    
+    padding-bottom: 500px;
+}
+
+
+.container{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 400px;
+    margin-top: 60px;background-color:rgba(255, 255, 0, 0.279);
+    border: 5px black solid;
+    border: 3px black solid;
+    padding: 10px;
+    border-radius: 9px;
+    padding-top: 5px;
+   
+
+
+}
+.nombre{
+    margin-left: 10px;
+    font-family: cursive;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    padding-top: 0;
+    
+}
+.image{
+    margin-left: 14px;
+    margin-bottom: 5px;
+}
+.vida{
+    margin-left: 35px;
+    margin-bottom: 5px;
+}
+.peso{
+    margin-left: 34px;
+    margin-bottom: 5px;
+}
+.ataque{
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.defensa{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.velocidad{
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+.altura{
+    margin-left:21px;
+}
+.labelvelocidad{
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.button{
+    background-color: yellow;
+   
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: all 400ms ease;
+    margin-bottom: 3px;
+}
+.button:hover{
+    transform: translateY(-4%);
+    width: 150px;
+    height: 50px;
+    font-size: x-large;
+
+}
+.crea{
+    color:yellow;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0;
+    background-color:black;
+    border-radius: 7px;
+}
+.pokemon{
+  
+    margin-bottom: 0%;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+    width: 130px;
+    margin: 0;
+   
+   
+   
+    display: inline-block;
+   
+}
+input{
+    border-radius: 5px;
+    background-color: yellow;
+}

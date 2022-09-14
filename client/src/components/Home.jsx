@@ -10,6 +10,7 @@ import Card from "./Card";
 import s from "./Home.module.css"
 import PokemonNotFound from "./PokemonNotFound";
 import pick from "../image/pikachu.png"
+import Loading from "./Loading";
 
 
 
@@ -165,7 +166,7 @@ function handleTipos(e){
                     
                     )
                 }):<PokemonNotFound/>
-                :<h1>Loading...</h1>
+                :<Loading/>
             } 
             
         </div>

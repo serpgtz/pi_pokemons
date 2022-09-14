@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTipos,postPokemons } from "./action";
 import { Link, useHistory } from "react-router-dom";
 import s from "./createPokemon.module.css"
+import image from "../image/pngegg.png"
+import image2 from "../image/pokemon.com.png"
 
 
 function Validate(input){
@@ -181,13 +183,16 @@ export default function CreatePokemon(){
    }
 
     return(
-        <div>
-            <h1>crear pokemon</h1>
+        <div className={s.fullcontainer}>
+        <div className={s.container} >
+           {/* <img className={s.imagen} src={image}width="100px"/> */}
 
-            <form onSubmit={e=>handleSubmit(e)}>
+            <form   onSubmit={e=>handleSubmit(e)}>
+                <h1 className={s.crea}>Crea tu pokemon</h1>
+                <img className={s.pokemon} src={image2} width="300px"/>
                 <div>
                     <label>Nombre:</label>
-                    <input value={input.name} type={"text"}
+                    <input className={s.nombre} value={input.name} type={"text"}
                     name="name"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -199,7 +204,7 @@ export default function CreatePokemon(){
 
                 <div>
                     <label>Imagen:</label>
-                    <input value={input.image} type={"text"}
+                    <input className={s.image}  value={input.image} type={"text"}
                     name="image"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -212,7 +217,7 @@ export default function CreatePokemon(){
 
                 <div>
                     <label>Vida:</label>
-                    <input value={input.vida} type={"number"}
+                    <input className={s.vida} value={input.vida} type={"number"}
                     name="vida"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -224,7 +229,7 @@ export default function CreatePokemon(){
 
                 <div>
                     <label>Peso:</label>
-                    <input value={input.peso} type={"number"}
+                    <input className={s.peso} value={input.peso} type={"number"}
                     name="peso"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -236,7 +241,7 @@ export default function CreatePokemon(){
 
                 <div>
                     <label>Ataque:</label>
-                    <input value={input.ataque} type={"number"}
+                    <input className={s.ataque} value={input.ataque} type={"number"}
                     name="ataque"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -248,7 +253,7 @@ export default function CreatePokemon(){
 
                 <div>
                     <label>Defensa:</label>
-                    <input value={input.defensa} type={"number"}
+                    <input className={s.defensa} value={input.defensa} type={"number"}
                     name="defensa"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -259,8 +264,8 @@ export default function CreatePokemon(){
                     }
 
                 <div>
-                    <label>Velocidad:</label>
-                    <input value={input.velocidad} type={"number"}
+                    <label className={s.labelvelocidad}>Velocidad:</label>
+                    <input className={s.velocidad} value={input.velocidad} type={"number"}
                     name="velocidad"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -272,7 +277,7 @@ export default function CreatePokemon(){
 
                 <div>
                     <label>Altura:</label>
-                    <input value={input.altura} type={"number"}
+                    <input className={s.altura} value={input.altura} type={"number"}
                     name="altura"
                     onChange={e=>handleChange(e)}/>
                 </div>
@@ -325,8 +330,9 @@ export default function CreatePokemon(){
             </form>
 
             <Link to={"/home"}>
-            <button>home</button>
+            <button className={s.button}>home</button>
             </Link>
+       </div>
        </div>
     )
 }

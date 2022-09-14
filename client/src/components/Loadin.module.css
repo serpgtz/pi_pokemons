@@ -1,0 +1,8 @@
+.container{
+    
+    background-color: rgba(255, 255, 0, 0);
+    padding-top: 0px;
+    width: 400px;
+    flex-direction: row;
+    margin-left: 380px;
+}
