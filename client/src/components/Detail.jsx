@@ -19,6 +19,14 @@ export default function Detail(props){
     },[dispatch])
 
     const pokemon = useSelector(state=>state.pokemon)
+    
+  
+    console.log(pokemon)
+  
+
+    // function handleback(e){
+    //     window.history.back()
+    // }
 
 
     return (
@@ -38,17 +46,16 @@ export default function Detail(props){
                         <h4 className={s.peso}>Peso:{pokemon[0].peso}</h4>
                         <h5 className={s.id}>Id:{pokemon[0].id}</h5>
                     </div>:<h1>Loading...</h1>
-
-                    
+          
                 }
-            
                 
-                <ActualizarName/>
+                        
+                {/* <ActualizarName id={pokemon.id}/> */}
                 <div>
                     <Link to={"/home"}>
                          <button className={s.button}>Home</button>
                     </Link>
-                
+                        {/* <button onClick={e=>handleback(e)}>Volver</button> */}
                 </div>
                 
                 

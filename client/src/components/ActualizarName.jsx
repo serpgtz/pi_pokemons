@@ -5,7 +5,7 @@ import { putPokemon } from "./action";
 
 
 
-export default function ActualizarName(){
+export default function ActualizarName({id}){
 
     const [input,setInput] = useState("")
 
@@ -21,7 +21,8 @@ function handleChange(e){
 }
 function handleSubmit(e){
     e.preventDefault()
-    dispatch(putPokemon(input))
+    const actualizar = {name:input,id,}
+    dispatch(putPokemon(actualizar))
 }
 
     return(

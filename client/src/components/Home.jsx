@@ -83,13 +83,14 @@ function handleTipos(e){
 
 
 
+
     return(
         <div className={s.body}>
             <nav className={s.nav}>
 
-                <di>
+                <div>
                     <img src={pick}width="70px"/>
-                </di>
+                </div>
                 <div className={s.crear} >
                     <Link className={s.link} to ={"/pokemon"}>Crear<br/> Pokemon</Link>
                 </div>

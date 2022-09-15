@@ -54,7 +54,7 @@ router.get("/:id",async(req,res)=>{
             res.send(pokemon.length?pokemon:"no existe poquemon")
         }
 
-      
+        
     } 
     catch (error) {
         
@@ -62,7 +62,6 @@ router.get("/:id",async(req,res)=>{
  
     
 })
-
 
 router.post("/",async(req,res)=>{
 
@@ -94,14 +93,21 @@ router.post("/",async(req,res)=>{
    })
 
 
-// router.put("/",async(req,res)=>{
-//     try {
-//         const {name}= req.body
+router.put("/",async(req,res)=>{
+    try {
+        const {actualizar}= req.body
 
-//         const pokemon = 
+        const pokemon = await Pokemon.update({
+            name:actualizar.name
+        },{
+            where:{
+                id:actualizar.id
+            }
+        })
+        res.send(pokemon)
         
-//     } catch (error) {
+    } catch (error) {
         
-//     }
-// })
+    }
+})
 module.exports = router;

@@ -76,6 +76,7 @@ ul{
     margin-top: 5px;
     transition: all 400ms ease;
     margin-bottom: 3px;
+    cursor: pointer;
 }
 .button:hover{
     transform: translateY(-4%);
@@ -91,6 +92,7 @@ ul{
     margin-bottom: 0;
     background-color:black;
     border-radius: 7px;
+ 
 }
 .pokemon{
   
@@ -108,4 +110,6 @@ ul{
 input{
     border-radius: 5px;
     background-color: yellow;
+    transition: all;
+    cursor: pointer;
 }
