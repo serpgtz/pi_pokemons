@@ -1,87 +1,157 @@
+.fullcontainer{
+    background-image: url("../image/pokemon-1662790607801-2061.jpg");
+    background-attachment: fixed;
+    display: flex;
+    
+    padding-bottom: 50px;
+}
 .detail{
    
-   display: flex;
-   flex-direction: column;
-   height: 500px;
-   background-color: yellow;
-   width: auto;
-   padding-top: 50px;
-   padding-bottom: 50px;
-   margin: 30px;
-   margin-left: 200px;
-   margin-right: 200px;
-   border: 5px black solid;
-   border-radius: 15px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 400px;
+    margin-top: 10px;background-color:rgba(255, 255, 0, 0.279);
+    border: 5px black solid;
+    border: 3px black solid;
+    padding: 10px;
+    border-radius: 9px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 0%;
+    
+   
+}
+.div{
+    margin: 0%;
+    padding: 0%;
+  
+}
+.containerImage{
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 7px;
+    border: 3px black solid;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-top: 5px;
+
 }
 ul{
     list-style-type: none;
 }
 .name{
-    color: orangered;
+    
     font-size: 40px;
     font-family: cursive;
-}
-.tipos{
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-    /* display: inline-block; */
-    float: inline-start;
-    padding-left:0px;
-    margin-left: 370px;
-}
-.vida{
-    flex-direction: column;
-    /* display: inline-block; */
-    float: left;
-    margin-left: 150px   
-    ;
-}
-.ataque{
-    flex-direction: column;
-    /* display: inline-block; */
-    float: left;
-    margin-left: 15px;
+    color:yellow;
+    margin-top: 0px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    background-color:black;
+    border-radius: 7px;
+    height: 60px;
     
 }
-.defensa{
-    flex-direction: column;
+
+.containerTipos{
+    display: inline-block;
+    /* flex-direction: row; */
+    
+    margin-right: 60px;
+    background-color: yellow;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.tipos{
+    display: inline-flex;
+    margin-left: 90px;
+    margin-right: 70px;
+    padding-top: 0;
+ }
+ /* .containerP{
+    background-color: yellow;
+ } */
+ p{
+    margin-left: 10px;
+ }
+.vida{
+    display: inline-flex;
+    /* display: inline-block; */
+    float: left;
+    margin-right: 6px;
+    color:  mediumpurple;
+      
+    
+}
+.ataque{
+    display: inline-flex;
     /* display: inline-block; */
     float: left;
     margin-left: 15px;
+    color:  mediumpurple;
+}
+.defensa{
+    display: inline-flex;
+    /* display: inline-block; */
+    float: left;
+    margin-left: 15px;
+    color:  mediumpurple;
 }
 .velocidad{
-    flex-direction: column;
+    display: inline-flex;
     /* display: inline-block; */
     float: left;
     margin-left: 15px;
+    color:  mediumpurple;
 }
 .altura{
-    flex-direction: column;
+    display: inline-flex;
     /* display: inline-block; */
     float: left;
-    margin-left: 15px;
+    margin-left: 100px;
+    color:  mediumpurple;
 }
 .peso{
-    flex-direction: column;
+    display: inline-flex;
     /* display: inline-block; */
     float: left;
     margin-left: 15px;
+    color:  mediumpurple;
 }
 .id{
-    flex-direction: column;
+    display: inline-flex;
     /* display: inline-block; */
     display: flex;
     float: inline-start;
-    margin-left: 15px; 
+    margin-left: 10px; 
     margin-top: 50px;
-    padding-bottom: 100px;
+    color:  mediumpurple;
+   
 }
 
+
+
 .button{
-    width: 200px;
-    border: 3px black solid;
+    background-color: yellow;
+   
     border-radius: 3px;
-    background-color: white;
-    color: black;
+    margin-top: 5px;
+    transition: all 400ms ease;
+    margin-bottom: 0px;
+    cursor: pointer;
+    padding-bottom: 0;
+}
+.button:hover{
+    transform: translateY(-4%);
+    width: 150px;
+    height: 50px;
+    font-size: x-large;
+
 }

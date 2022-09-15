@@ -7,10 +7,12 @@ export function LandingPage(){
 
 
     return(
-        <div>
+        <div className={s.fullContainer}>
+            <div className={s.containerButton}>
          <Link to="/home">
           <button className={s.button}>Ir a Pokemons</button>
          </Link>
+             </div>
         </div>
     )
 

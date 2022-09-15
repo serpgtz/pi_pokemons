@@ -1,11 +1,41 @@
+.fullContainer{
+    background-image: url("../image/pokemon-1662790296407-5463.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    display: flex;
+    padding: 400px;
+    padding-bottom: 5px;
+}
+
+/* .containerButton{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    margin-bottom: 500px;
+   
+    
+} */
 .button{
-    width: 200px;
-    border: 3px black solid;
-    border-radius: 3px;
-    background-color: white;
-    color: rgb(3, 3, 3);
-    cursor: pointer;
-    margin-top: 300px;
-    float: inline-end;
-    background-color: yellow;
+    /* position: relative;
+    display: inline-block;
+    
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 220px;
+    padding: 0;
+     */
+     cursor: pointer;
+     margin-bottom: 300px;
+     margin-left: 150px;
+     background-color: yellow;
+     transition: all 400ms ease;
+     border-radius: 3px;
+     padding: 15px;
+}
+.button:hover{
+    transform: translateY(-4%);
+    width: 150px;
+    height: 70px;
+    font-size: medium;
+
 }

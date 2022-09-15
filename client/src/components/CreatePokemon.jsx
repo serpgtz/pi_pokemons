@@ -16,7 +16,7 @@ function Validate(input){
        
         return error
     }
-     else if(input.name.length<5||input.name.length>15){
+     else if(input.name.length<4||input.name.length>15){
         error.name = "nombre no debe tener menos de 5 caractares ni mayor a 15 caracteres"
         return error
     }
@@ -195,6 +195,7 @@ export default function CreatePokemon(){
                     <input className={s.nombre} value={input.name} type={"text"}
                     name="name"
                     onChange={e=>handleChange(e)}/>
+                   
                 </div>
                 {
                         error.name && (
@@ -221,6 +222,8 @@ export default function CreatePokemon(){
                     name="vida"
                     onChange={e=>handleChange(e)}/>
                 </div>
+                <span>años</span>
+                
                 {
                         error.vida && (
                             <p className= {s.error}>{error.vida} </p>
@@ -233,6 +236,7 @@ export default function CreatePokemon(){
                     name="peso"
                     onChange={e=>handleChange(e)}/>
                 </div>
+                <span>kilos</span>
                 {
                         error.peso && (
                             <p className= {s.error}>{error.peso} </p>
@@ -281,6 +285,7 @@ export default function CreatePokemon(){
                     name="altura"
                     onChange={e=>handleChange(e)}/>
                 </div>
+                <span>mts</span>
                 {
                         error.altura && (
                             <p className= {s.error}>{error.altura} </p>
@@ -309,9 +314,9 @@ export default function CreatePokemon(){
                     <ul>
                         {
                             input.tipos?.map(t=>{
-                                return(<div>
-                                     <li>{t}</li>
-                                    <button name="tipos" value={t} onClick={e=>handleDelete(e)}>x</button>
+                                return(<div className={s.listContainer}>
+                                     <li className={s.list}>{t}</li>
+                                    <button className={s.butt} name="tipos" value={t} onClick={e=>handleDelete(e)}>x</button>
                                    
                                     </div>
                                 )
