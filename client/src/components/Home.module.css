@@ -96,3 +96,18 @@
     background-color: rgb(20, 17, 17);
     border: 2px yellow solid;
 }
+
+.volver{
+    background-color: yellow;
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: all 400ms ease;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+.volver:hover{
+    transform: translateY(-4%);
+    width: 150px;
+    height: 50px;
+    font-size: x-large;
+}

@@ -29,7 +29,7 @@ function Validate(input){
        
           
         
-        error.image = 'Not valid format';
+        error.image = 'Formato no valido';
         return error
     }
        

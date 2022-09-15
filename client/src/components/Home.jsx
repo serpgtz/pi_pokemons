@@ -11,6 +11,7 @@ import s from "./Home.module.css"
 import PokemonNotFound from "./PokemonNotFound";
 import pick from "../image/pikachu.png"
 import Loading from "./Loading";
+import flecha from "../image/NicePng_flecha-png_4390743.png"
 
 
 
@@ -36,6 +37,8 @@ export function Home(){
     const dispatch =  useDispatch()
     const tipos = useSelector(state=>state.tipos)
 
+    const [viewElement,setViewElement] = useState(false)//controlar button 
+
 
 useEffect(()=>{
     dispatch(getPokemons())
@@ -50,6 +53,7 @@ function handleRefresh(e){
      e.preventDefault()
     dispatch(getPokemons())
     setPagecurrent(1)
+    setViewElement(false)
 }
 function handleAtaque(e){
     e.preventDefault()
@@ -139,17 +143,17 @@ function handleTipos(e){
                     </select>
                 </div>
                 </nav>
-                <SearchBar className={s.search}/>
+                <SearchBar className={s.search} setOrden={setOrden} setViewElement={setViewElement}/>
+                {
+                    viewElement?
+                    <button onClick={handleRefresh} className={s.volver}>Volver</button>:null
+                }
+                
                 <Paginado pokemonPerPage={pokemonPerPage}
                 pokemones={pokemones.length}
                 paginado={paginado}/>
-
-
-           
-
-
-
-            {
+                
+ {
                 currentPokemon.length>0?
                 typeof currentPokemon[0]==="object"?
                 currentPokemon.map(p=>{
@@ -173,3 +177,12 @@ function handleTipos(e){
         </div>
     )
 }
+          
+               
+
+               
+           
+
+
+
+           
