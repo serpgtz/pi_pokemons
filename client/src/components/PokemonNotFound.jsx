@@ -18,7 +18,7 @@ export default function PokemonNotFound(){
     return(
         <div>
             <h1>Pokemon no encontrado</h1>
-            <img src={poketriste}/>
+            <img src={poketriste} width="200px"/>
             {/* <button onClick={e=>handleRefresh(e)}>Refresh</button> */}
         </div>
     )

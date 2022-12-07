@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getPokemonById,resetPokemon } from "./action/index";
-import ActualizarName from "./ActualizarName";
+// import ActualizarName from "./ActualizarName";
 import s from "./Detail.module.css"
 
 
@@ -16,6 +16,7 @@ export default function Detail(props){
         dispatch(getPokemonById(props.match.params.id))
         console.log(props.match.params.id)
         return()=>dispatch(resetPokemon())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[dispatch])
 
     const pokemon = useSelector(state=>state.pokemon)
@@ -37,6 +38,7 @@ export default function Detail(props){
                     <div className={s.div}>
                         <h1 className={s.name}>{pokemon[0].name}</h1>
                         <div className={s.containerImage}>
+                            
                              <img src={pokemon[0].image} width="300px"/>
                         </div>
                         <div className={s.containerTipos}>

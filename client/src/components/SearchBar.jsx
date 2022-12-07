@@ -8,7 +8,7 @@ import s from "./SearchBar.module.css"
 
 
 
-export default function SearchBar({setOrden,setViewElement}){
+export default function SearchBar({setOrden,setViewElement,setPagecurrent}){
 
     const [name, setName] = useState("")
 
@@ -24,6 +24,7 @@ export default function SearchBar({setOrden,setViewElement}){
         e.preventDefault()
         dispatch(getPokemonByName(name))
         setOrden(1)
+        setPagecurrent(1)
         setViewElement(true)
         setName("")
     }

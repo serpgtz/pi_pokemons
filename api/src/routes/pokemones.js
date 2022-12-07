@@ -26,7 +26,9 @@ try {
          
        }
         
- 
+    //    pokemon1.length
+    //    ?res.status(200).send(pokemon1)
+    //    :res.status(400).send("no hay pokemon con ese nombre")
         res.send(pokemon1.length?pokemon1:"no hay pokemon con ese nombre")
      }
      else{

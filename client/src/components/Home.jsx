@@ -143,11 +143,12 @@ function handleTipos(e){
                     </select>
                 </div>
                 </nav>
-                <SearchBar className={s.search} setOrden={setOrden} setViewElement={setViewElement}/>
+                <SearchBar setPagecurrent={setPagecurrent} className={s.search} setOrden={setOrden} setViewElement={setViewElement}/>
                 {
                     viewElement?
                     <button onClick={handleRefresh} className={s.volver}>Volver</button>:null
                 }
+                
                 
                 <Paginado pokemonPerPage={pokemonPerPage}
                 pokemones={pokemones.length}

@@ -32,4 +32,21 @@ try {
     
    
 })
+
+router.post("/",async(req,res)=>{
+
+    try {
+        const {name} = req.body
+
+        let tipo= await Type.create({
+            name,
+        })
+    
+        res.send(tipo.length?tipo:"no hay pokemon")
+    
+    } catch (error) {
+        console.log(error)
+    }
+   
+})
 module.exports = router;

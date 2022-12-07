@@ -9,7 +9,7 @@ export default function Loading(){
     return[
         <div className={s.container}>
             <h1>Loading...</h1>
-            <img src={image} width="270px"/>
+            <img src={image} width="190px"/>
         </div>
     ]
 }
