@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a721f69e.chunk.css",
+    "main.js": "/static/js/main.213ce7f9.chunk.js",
+    "main.js.map": "/static/js/main.213ce7f9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.af71729d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.af71729d.js.map",
+    "static/js/2.df9e8c06.chunk.js": "/static/js/2.df9e8c06.chunk.js",
+    "static/js/2.df9e8c06.chunk.js.map": "/static/js/2.df9e8c06.chunk.js.map",
+    "static/js/3.97746f9d.chunk.js": "/static/js/3.97746f9d.chunk.js",
+    "static/js/3.97746f9d.chunk.js.map": "/static/js/3.97746f9d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.a721f69e.chunk.css.map": "/static/css/main.a721f69e.chunk.css.map",
+    "static/js/2.df9e8c06.chunk.js.LICENSE.txt": "/static/js/2.df9e8c06.chunk.js.LICENSE.txt",
+    "static/media/NicePng_flecha-png_4390743.557277ed.png": "/static/media/NicePng_flecha-png_4390743.557277ed.png",
+    "static/media/Home.module.css": "/static/media/Pokemon Wallpapers For Computer in hd Pokemon Wallpaper For Computer.9978b69f.jpg",
+    "static/media/pikachu.cb81c8c0.png": "/static/media/pikachu.cb81c8c0.png",
+    "static/media/pngegg.8f8057f9.png": "/static/media/pngegg.8f8057f9.png",
+    "static/media/LandingPage.module.css": "/static/media/pokemon-1662790296407-5463.d61d3f25.jpg",
+    "static/media/Detail.module.css": "/static/media/pokemon-1662790607801-2061.c39957c7.jpg",
+    "static/media/pokemon.com.ec8ffb7a.png": "/static/media/pokemon.com.ec8ffb7a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.af71729d.js",
+    "static/js/2.df9e8c06.chunk.js",
+    "static/css/main.a721f69e.chunk.css",
+    "static/js/main.213ce7f9.chunk.js"
+  ]
+}
