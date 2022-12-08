@@ -6,6 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux"
 import { BrowserRouter } from 'react-router-dom';
 import store from './components/store';
+import axios from "axios";
+
+// axios.defaults.baseURL = "http://localhost:3001"
+axios.defaults.baseURL = "https://pipokemons-production.up.railway.app/"
 
 ReactDOM.render(
   <React.StrictMode>

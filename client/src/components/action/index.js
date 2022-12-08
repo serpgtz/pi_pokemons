@@ -18,7 +18,7 @@ export const ACTUALIZACION_NAME = "ACTUALIZACION_NAME"
 
 export function getPokemons(){
     return async function(dispatch){
-        const pokemones = await axios.get("http://localhost:3001/api/pokemones")
+        const pokemones = await axios.get("/api/pokemones")
         return dispatch({
             type: GET_ALL_POKEMONS,
             payload: pokemones.data
@@ -30,7 +30,7 @@ export function getPokemonById(id){
     console.log(id)
     return async function(dispatch){
     
-        const pokemon = await axios.get(`http://localhost:3001/api/pokemones/${id}`)
+        const pokemon = await axios.get(`/api/pokemones/${id}`)
         return dispatch({
             type: GET_POKEMON,
             payload: pokemon.data
