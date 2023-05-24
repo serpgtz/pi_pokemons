@@ -18,7 +18,7 @@ try {
     if(name){
         let searchName = name.toLocaleLowerCase()
          pokemon1= await getPokemonByName(searchName)
-         console.log("desde ruta", pokemon1)
+         console.log("desde rutas", pokemon1)
          
        if(!pokemon1){
  
